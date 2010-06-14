@@ -7,7 +7,7 @@ namespace EntityFrameworkStart
     {
         public SchoolContext()
             : base( "name=SchoolEntities",
-                   "SchoolModelStoreContainer")
+                   "SchoolEntities")
         {
             Departments = CreateObjectSet<Department>();
         }

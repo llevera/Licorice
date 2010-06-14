@@ -16,7 +16,7 @@ namespace EntityFrameworkStartTests
         {
             SchoolContext context = new SchoolContext();
 
-            var departments = context.Departments.Where(x => x.Budget > 100);
+            var departments = context.Departments.Where(x => x.Budget > 100).ToList();
 
             Assert.That(departments.Count(), Is.GreaterThan(0) );
         }

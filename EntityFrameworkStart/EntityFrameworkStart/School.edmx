@@ -10,9 +10,9 @@
         </EntityContainer>
         <EntityType Name="Department">
           <Key>
-            <PropertyRef Name="DepartmentID" />
+            <PropertyRef Name="DepartmentId" />
           </Key>
-          <Property Name="DepartmentID" Type="int" Nullable="false" />
+          <Property Name="DepartmentId" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Budget" Type="money" Nullable="false" />
           <Property Name="StartDate" Type="datetime" Nullable="false" />
@@ -23,14 +23,14 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SchoolModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="SchoolEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="SchoolEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Departments" EntityType="SchoolModel.Department" />
         </EntityContainer>
         <EntityType Name="Department">
           <Key>
-            <PropertyRef Name="DepartmentID" />
+            <PropertyRef Name="DepartmentId" />
           </Key>
-          <Property Name="DepartmentID" Type="Int32" Nullable="false" />
+          <Property Name="DepartmentId" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Budget" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="StartDate" Type="DateTime" Nullable="false" />
@@ -41,9 +41,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="SchoolModelStoreContainer" CdmEntityContainer="SchoolEntities1">
+        <EntityContainerMapping StorageEntityContainer="SchoolModelStoreContainer" CdmEntityContainer="SchoolEntities">
           <EntitySetMapping Name="Departments"><EntityTypeMapping TypeName="SchoolModel.Department"><MappingFragment StoreEntitySet="Department">
-            <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+            <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
             <ScalarProperty Name="Name" ColumnName="Name" />
             <ScalarProperty Name="Budget" ColumnName="Budget" />
             <ScalarProperty Name="StartDate" ColumnName="StartDate" />
